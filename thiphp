@@ -1,0 +1,51 @@
+// Bài 1: In ra số chẵn từ 1 đến 10
+// ----------------------------------------
+echo "Bài 1: Các số chẵn từ 1 đến 10\n";
+for ($i = 1; $i <= 10; $i++) {
+    if ($i % 2 == 0) {
+        echo $i . " ";
+    }
+}
+echo "\n\n";
+ 
+ 
+// ----------------------------------------
+// Bài 2: Kiểm tra một số nguyên có phải là số nguyên tố hay không
+// ----------------------------------------
+function isNguyenTo($n) {
+    if ($n < 2) {
+        return false;
+    }
+    for ($i = 2; $i <= sqrt($n); $i++) {
+        if ($n % $i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+ 
+echo "Bài 2: Kiểm tra số nguyên tố\n";
+$soCanKiemTra = 17;
+if (isNguyenTo($soCanKiemTra)) {
+    echo "$soCanKiemTra là số nguyên tố.\n\n";
+} else {
+    echo "$soCanKiemTra không phải là số nguyên tố.\n\n";
+}
+ 
+ 
+// ----------------------------------------
+// Bài 3: Hàm in hình chữ nhật bằng dấu (*)
+// ----------------------------------------
+function inHinhChuNhat($chieuRong, $chieuCao) {
+    for ($h = 1; $h <= $chieuCao; $h++) {
+        for ($r = 1; $r <= $chieuRong; $r++) {
+            echo "*";
+        }
+        echo "\n";
+    }
+}
+ 
+echo "Bài 3: Hình chữ nhật (rộng 5, cao 3)\n";
+inHinhChuNhat(5, 3);
+ 
+?>
